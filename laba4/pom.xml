@@ -35,6 +35,15 @@
                         <version>4.8.6</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.mebigfatguy.fb-contrib</groupId>
+                            <artifactId>fb-contrib</artifactId>
+                            <version>7.6.4</version>
+                        </plugin>
+                    </plugins>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
