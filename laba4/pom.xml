@@ -133,5 +133,44 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>colt</id>
+            <properties>
+                <source.directory>colt/</source.directory>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>local.lib</groupId>
+                    <artifactId>local.lib.colt</artifactId>
+                    <version>1.0</version>
+                    <scope>system</scope>
+                    <systemPath>${project.basedir}/lib/colt.jar</systemPath>
+                </dependency>
+                <dependency>
+                    <groupId>local.lib</groupId>
+                    <artifactId>local.lib.concurrent</artifactId>
+                    <version>1.0</version>
+                    <scope>system</scope>
+                    <systemPath>${project.basedir}/lib/concurrent.jar</systemPath>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                    <mainClass>cern.colt.matrix.bench.BenchmarkMatrix</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 </project>
