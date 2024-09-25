@@ -9,11 +9,11 @@
     <groupId>tech.rasskazov.laba.informational-system-design</groupId>
     <artifactId>laba4</artifactId>
 
-    <packaging>jar</packaging>
-
     <properties>
         <source.directory>main/java</source.directory>
     </properties>
+	
+	<packaging>jar</packaging>
 
     <build>
         <finalName>laba4</finalName>
